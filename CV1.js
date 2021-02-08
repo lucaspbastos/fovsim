@@ -1,4 +1,5 @@
 class CV1 extends Sensor {
+    //https://www.oculus.com/blog/oculus-roomscale-tips-for-setting-up-a-killer-vr-room/
     static count = 0;
     constructor(X, Y, DEG) {
         const H_FOV = 100;
@@ -17,5 +18,7 @@ class CV1 extends Sensor {
         this.drawArc(IDEAL, 'rgba(0, 255, 0, 0.3)');
         this.drawArc(this.CLOSE, 'rgba(255, 0, 0, 0.2)');
         this.drawStation();
+        this.drawMidline();
+        return 1;
     }
 }

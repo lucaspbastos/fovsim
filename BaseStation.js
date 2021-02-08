@@ -1,5 +1,6 @@
 class BaseStation extends Sensor {
     constructor(X, Y, DEG) {
+        //https://www.vive.com/us/support/vive/category_howto/tips-for-setting-up-the-base-stations.html
         const H_FOV = 120;
         const V_FOV = 120;
         const RANGE = 5;
@@ -11,6 +12,7 @@ class BaseStation extends Sensor {
         this.drawArc(this.RANGE, 'rgba(0, 255, 0, 0.5)');
         this.drawArc(this.CLOSE, 'rgba(255, 0, 0, 0.2)');
         this.drawStation();
+        this.drawMidline();
         return 1;
     }
 
