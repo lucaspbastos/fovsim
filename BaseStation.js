@@ -1,20 +1,21 @@
-let bsArray = [];
 class BaseStation extends Sensor {
     constructor(X, Y, DEG) {
         const H_FOV = 120;
         const V_FOV = 120;
-        const LEN = 5;
+        const RANGE = 5;
         const NAME = "Base Station 1.0";
-        super(X, Y, DEG, H_FOV, V_FOV, LEN, NAME);
-        bsArray.push(this);
-        this.id = bsArray.length-1;
+        super(X, Y, DEG, H_FOV, V_FOV, RANGE, NAME);
     }
 
-    getID() {
-        return this.id;
+    drawAll() {
+        this.drawArc(this.RANGE, 'rgba(0, 255, 0, 0.5)');
+        this.drawArc(this.CLOSE, 'rgba(255, 0, 0, 0.2)');
+        this.drawStation();
+        return 1;
     }
 
-    remove() {
-        delete bs2Array[this.id];
+    setSync() {
+        this.sync = true;
+        return 1;
     }
 }
