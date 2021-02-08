@@ -23,6 +23,9 @@ function draw() {
     const officey = inchesToMeters(56);
     room((mainx+officex)*sizescale, officey*sizescale);
 
+    let b1 = new BaseStation2(50, 50, 30);
+    b1.drawAll();
+
     noLoop();
 }
 
