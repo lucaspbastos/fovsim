@@ -1,6 +1,6 @@
 class BaseStation extends Sensor {
+    //SRC: https://www.vive.com/us/support/vive/category_howto/tips-for-setting-up-the-base-stations.html
     constructor(X, Y, DEG) {
-        //https://www.vive.com/us/support/vive/category_howto/tips-for-setting-up-the-base-stations.html
         const H_FOV = 120;
         const V_FOV = 120;
         const RANGE = 5;
@@ -16,6 +16,7 @@ class BaseStation extends Sensor {
         return 1;
     }
 
+    //TODO: implement sync
     setSync() {
         this.sync = true;
         return 1;
